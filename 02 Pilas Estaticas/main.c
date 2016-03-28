@@ -33,6 +33,10 @@ int main(){
                 }
                 break;
             case 3:
+                if(emptyStack(pila))
+                    printf("<<< Pila vaciada >>>\n");
+                else
+                    printf("<<< Pila vacia >>>\n");
                 break;
             case 4:
                 break;

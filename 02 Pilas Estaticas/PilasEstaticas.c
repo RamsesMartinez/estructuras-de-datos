@@ -20,15 +20,28 @@ bool push(StackEntry item, Stack *pila){
     return true;
 }
  
-/** Pila vacia */
+/** Esta la pila vacia */
 bool stackEmpty(Stack *pila){
     return pila -> top < 0;
 }
 
-/** Pila llena */
+/** Esta la pila llena */
 bool stackFull(Stack *pila){
     return pila -> top >= MAXSTACK -1;
 }  
+
+/** Limpiar toda la pila */
+bool emptyStack(Stack *pila){
+    if (!stackEmpty(pila)){
+    	int i;
+        for(i = pila -> top; i >= 0 ; i--){
+            pila -> entry[i] = 0;
+            pila -> top--;
+        }  
+        return true; 
+    }else
+    return;
+}
 
 /** Eliminar dato y retornarlo. Se debe validar en el main aunque ya incluye ya tiene validacion*/
 StackEntry pop(Stack *pila){
