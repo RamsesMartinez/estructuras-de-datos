@@ -5,8 +5,8 @@
 #include "PilasEstaticas.h"
 
 /** Crear pila*/
-void createStack(Stack *s){
-    s -> top = -1;
+void createStack(Stack *pila){
+    pila -> top = -1;
 }
 
 /** Insertar elemento */
@@ -19,7 +19,7 @@ bool push(StackEntry item, Stack *pila){
     }
     return true;
 }
-
+ 
 /** Pila vacia */
 bool stackEmpty(Stack *pila){
     return pila -> top < 0;
@@ -27,7 +27,7 @@ bool stackEmpty(Stack *pila){
 
 /** Pila llena */
 bool stackFull(Stack *pila){
-    return pila -> top >= MAXSTACK-1;
+    return pila -> top >= MAXSTACK -1;
 }  
 
 /** Eliminar dato y retornarlo */
@@ -52,8 +52,7 @@ int menu(){
     printf("\n3. Vaciar");
     printf("\n4. Cima");
     printf("\n5. Tamanio actual");
-    printf("\n6. Imprimir");
-    printf("\n7. Salir"); 
+    printf("\n6. Salir");  
 
     printf("\n\nOpcion:\t");    
     scanf("%d",&opc);

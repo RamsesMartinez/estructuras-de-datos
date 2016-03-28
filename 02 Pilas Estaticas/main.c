@@ -12,15 +12,17 @@ int main(){
     Stack p, *pila;
     pila = &p;
     createStack(pila);
-    while((opc = menu()) != 7) {
+    imprimir(pila);
+    while((opc = menu()) != 6) {
+        system("cls");
         switch(opc){ 
             case 1:
                 printf("\nDato:\t");
                 scanf("%d",&se);
-                if (push(se,pila))
+                if (push(se,pila)) 
                     printf("\nNumero insertado\n");
                 else
-                    printf("\nPila Llena!\n");
+                    printf("\nPila llena!\n");
                 break;
             case 2:
                 
@@ -32,12 +34,11 @@ int main(){
             case 5:
                 break;
             case 6:
-                imprimir(pila);
                 break;
-            case 7:
-                break;
-            
+            default:
+                printf("\nElija una opcion valida\n");
         }
+        imprimir(pila);
     }
     return 0;
 }
