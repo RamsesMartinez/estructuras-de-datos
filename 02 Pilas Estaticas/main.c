@@ -29,16 +29,20 @@ int main(){
                     printf("\n << La pila esta vacia >>\n");
                 else{ 
                     StackEntry aux = pop(pila);
-                    printf("Dato retirado:\t%d\n",aux);
+                    printf("\n<<< Dato retirado: %d >>>\n",aux);
                 }
                 break;
             case 3:
-                if(emptyStack(pila))
+                if(delStack(pila))
                     printf("<<< Pila vaciada >>>\n");
                 else
                     printf("<<< Pila vacia >>>\n");
                 break;
             case 4:
+                if (stackEmpty(pila))
+                    printf("\n << La pila esta vacia >>\n");
+                else         
+                    printf("\n<<< Cima de la pila: %d >>>\n", pila -> entry[pila -> top]);
                 break;
             case 5:
                 break;

@@ -19,19 +19,19 @@ bool push(StackEntry item, Stack *pila){
     }
     return true;
 }
- 
-/** Esta la pila vacia */
+
+ /** Pregunta si la pila vacia */
 bool stackEmpty(Stack *pila){
     return pila -> top < 0;
 }
 
-/** Esta la pila llena */
+/** Pregunta si la pila esta llena */
 bool stackFull(Stack *pila){
     return pila -> top >= MAXSTACK -1;
 }  
 
-/** Limpiar toda la pila */
-bool emptyStack(Stack *pila){
+/** Vacia toda la pila */
+bool delStack(Stack *pila){
     if (!stackEmpty(pila)){
     	int i;
         for(i = pila -> top; i >= 0 ; i--){
@@ -58,7 +58,6 @@ StackEntry pop(Stack *pila){
     return aux;
 }
 
-/** Menu de opciones */
 int menu(){ 
     int opc;
     printf("\nElija una opcion");
