@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define MAXSTACK 3 //tamanio de la pila
+#define MAXSTACK 5 //tamanio de la pila
 typedef int StackEntry;
 
 typedef struct stack{

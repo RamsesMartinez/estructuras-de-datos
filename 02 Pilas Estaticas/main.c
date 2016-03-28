@@ -20,7 +20,7 @@ int main(){
                 if (push(se,pila))
                     printf("\nNumero insertado\n");
                 else
-                    printf("Pila Llena! ");
+                    printf("\nPila Llena!\n");
                 break;
             case 2:
                 

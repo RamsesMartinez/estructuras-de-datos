@@ -21,30 +21,30 @@ bool push(StackEntry item, Stack *pila){
 }
 
 /** Pila vacia */
-bool stackEmpty(Stack *s){
-    return s -> top < 0;
+bool stackEmpty(Stack *pila){
+    return pila -> top < 0;
 }
 
 /** Pila llena */
-bool stackFull(Stack *s){
-    return s -> top > MAXSTACK;
-}
+bool stackFull(Stack *pila){
+    return pila -> top >= MAXSTACK-1;
+}  
 
 /** Eliminar dato y retornarlo */
-StackEntry pop(Stack *s){
+StackEntry pop(Stack *pila){
 	int aux;
-    if (stackEmpty(s))
+    if (stackEmpty(pila))
         printf("La Pila esta vacia\n");
     else{
-    	aux = s -> entry[s -> top];
-        s -> entry[s -> top]=0;
-        s -> top--;
+    	aux = pila -> entry[pila -> top];
+        pila -> entry[pila -> top]=0;
+        pila -> top--;
     }
     return aux;
 }
 
 /** Menu de opciones */
-int menu(){
+int menu(){ 
 	int opc;
 	printf("\nElija una opcion");
 	printf("\n1. Insertar");
@@ -61,11 +61,25 @@ int menu(){
     return opc;
 }
 
-void imprimir(Stack *s){
-	int i;
-	for (i = 0; i <= s -> top; i++){
-		printf("\n_____");
-		printf("\n| %d |",s->entry[i]);
+void imprimir(Stack *pila){
+	if(stackEmpty(pila)){
+		printf("\n\t--------");
+		printf("\n\t| NULL |");
+		printf("\n\t--------");
+		printf("\n\t| PILA |");
+		printf("\n\t--------\n");
+	}else{
+		int i;
+		printf("\n\t--------");
+		printf("\n\t| NULL |");
+
+		for (i = pila -> top; i >= 0; i--){
+			printf("\n\t--------");
+			printf("\n\t|  %d   |", pila -> entry[i]);
+		}
+		
+		printf("\n\t--------");
+		printf("\n\t| PILA |");
+		printf("\n\t--------\n");
 	}
-	printf("\n_____");
 }
