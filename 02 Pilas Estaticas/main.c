@@ -7,7 +7,7 @@
 
 int main(){
     int opc;
-    printf("Se creara una pila para %d elementos.\n",MAXSTACK);
+    printf("<<< Pila para %d elementos >>>\n",MAXSTACK);
     StackEntry se;
     Stack p, *pila;
     pila = &p;
@@ -20,12 +20,17 @@ int main(){
                 printf("\nDato:\t");
                 scanf("%d",&se);
                 if (push(se,pila)) 
-                    printf("\nNumero insertado\n");
+                    printf("\n<<< Dato insertado >>>\n");
                 else
-                    printf("\nPila llena!\n");
+                    printf("\n<<< Pila llena >>>\n");
                 break;
             case 2:
-                
+                if(stackEmpty(pila))
+                    printf("\n << La pila esta vacia >>\n");
+                else{ 
+                    StackEntry aux = pop(pila);
+                    printf("Dato retirado:\t%d\n",aux);
+                }
                 break;
             case 3:
                 break;
@@ -36,7 +41,7 @@ int main(){
             case 6:
                 break;
             default:
-                printf("\nElija una opcion valida\n");
+                printf("\n<<< Elija una opcion valida >>>\n");
         }
         imprimir(pila);
     }

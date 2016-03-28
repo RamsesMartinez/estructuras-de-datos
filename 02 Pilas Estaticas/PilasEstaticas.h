@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <setjmp.h>
 
 #define MAXSTACK 5 //tamanio de la pila
 typedef int StackEntry;

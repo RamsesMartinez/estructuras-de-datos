@@ -12,10 +12,10 @@ void createStack(Stack *pila){
 /** Insertar elemento */
 bool push(StackEntry item, Stack *pila){
     if (stackFull(pila))
-    	return false;
+        return false;
     else{
-    	pila -> top++;
-    	pila -> entry[pila -> top] = item;
+        pila -> top++;
+        pila -> entry[pila -> top] = item;
     }
     return true;
 }
@@ -30,13 +30,15 @@ bool stackFull(Stack *pila){
     return pila -> top >= MAXSTACK -1;
 }  
 
-/** Eliminar dato y retornarlo */
+/** Eliminar dato y retornarlo. Se debe validar en el main aunque ya incluye ya tiene validacion*/
 StackEntry pop(Stack *pila){
-	int aux;
-    if (stackEmpty(pila))
-        printf("La Pila esta vacia\n");
+    int aux;
+    if (stackEmpty(pila)){
+        printf("<< La Pila esta vacia >>\n");
+        return;
+    }
     else{
-    	aux = pila -> entry[pila -> top];
+        aux = pila -> entry[pila -> top];
         pila -> entry[pila -> top]=0;
         pila -> top--;
     }
@@ -45,9 +47,9 @@ StackEntry pop(Stack *pila){
 
 /** Menu de opciones */
 int menu(){ 
-	int opc;
-	printf("\nElija una opcion");
-	printf("\n1. Insertar");
+    int opc;
+    printf("\nElija una opcion");
+    printf("\n1. Insertar");
     printf("\n2. Eliminar");
     printf("\n3. Vaciar");
     printf("\n4. Cima");
@@ -61,24 +63,24 @@ int menu(){
 }
 
 void imprimir(Stack *pila){
-	if(stackEmpty(pila)){
-		printf("\n\t--------");
-		printf("\n\t| NULL |");
-		printf("\n\t--------");
-		printf("\n\t| PILA |");
-		printf("\n\t--------\n");
-	}else{
-		int i;
-		printf("\n\t--------");
-		printf("\n\t| NULL |");
+    if(stackEmpty(pila)){
+        printf("\n\t--------");
+        printf("\n\t| NULL |");
+        printf("\n\t--------");
+        printf("\n\t| PILA |");
+        printf("\n\t--------\n");
+    }else{
+        int i;
+        printf("\n\t--------");
+        printf("\n\t| NULL |");
 
-		for (i = pila -> top; i >= 0; i--){
-			printf("\n\t--------");
-			printf("\n\t|  %d   |", pila -> entry[i]);
-		}
-		
-		printf("\n\t--------");
-		printf("\n\t| PILA |");
-		printf("\n\t--------\n");
-	}
+        for (i = pila -> top; i >= 0; i--){
+            printf("\n\t--------");
+            printf("\n\t|  %d   |", pila -> entry[i]);
+        }
+        
+        printf("\n\t--------");
+        printf("\n\t| PILA |");
+        printf("\n\t--------\n");
+    }
 }
