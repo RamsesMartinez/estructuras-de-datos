@@ -34,9 +34,9 @@ int main(){
                 break;
             case 3:
                 if(delStack(pila))
-                    printf("<<< Pila vaciada >>>\n");
+                    printf("\n<<< Pila vaciada >>>\n");
                 else
-                    printf("<<< Pila vacia >>>\n");
+                    printf("\n<<< Pila vacia >>>\n");
                 break;
             case 4:
                 if (stackEmpty(pila))
@@ -45,8 +45,10 @@ int main(){
                     printf("\n<<< Cima de la pila: %d >>>\n", pila -> entry[pila -> top]);
                 break;
             case 5:
+                printf("\n<<< Elementos en la pila: %d >>>\n", pila -> top + 1);
                 break;
             case 6:
+                printf("BYE BYE");
                 break;
             default:
                 printf("\n<<< Elija una opcion valida >>>\n");
