@@ -19,5 +19,5 @@ void potenciar(fraccion*, fraccion*, int);
 void restar(fraccion*, fraccion*, fraccion*);
 void simplificar(fraccion*);
 void sumar(fraccion*, fraccion*, fraccion*);
- 
+int  MCD(fraccion*);
  

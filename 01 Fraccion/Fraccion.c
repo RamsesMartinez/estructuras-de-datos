@@ -58,8 +58,12 @@ void pedirDatos(fraccion *ap1,fraccion *ap2,fraccion *apRes){
                 int pot;
                 printf("Fraccion 1:\n");
                 crearFraccion(ap1);
-                printf("\nPotencia (entero):\t");
-                scanf("%d",&pot);
+                do{
+                    printf("\nPotencia (entero):\t");
+                    scanf("%d",&pot);
+                    if (pot < 0)
+                        printf("La potencia debe ser un entero positivo\n");
+                }while (pot < 0);
                 potenciar(ap1, apRes, pot);
                 imprimirResultado(apRes);
                 break;
@@ -123,16 +127,30 @@ void potenciar(fraccion *ap1, fraccion *apRes, int pot){
  }
  
 void simplificar(fraccion *apRes){
-    int min=0;
-    if (apRes -> numerador <= apRes -> denominador) /**Asigna el minimo */
-        min = apRes -> numerador;
-    else
-        min = apRes -> denominador;
+    int mcd = MCD(apRes);
 
-    for (int i = 2; i <= min; i++){ /** Simplificacion */
-        while (apRes -> numerador % i == 0 && apRes -> denominador % i == 0){
-            apRes -> numerador = apRes -> numerador / i;
-            apRes -> denominador = apRes -> denominador / i;
-        }
+    apRes -> numerador = apRes -> numerador / mcd;
+    apRes -> denominador = apRes -> denominador / mcd;
+
+    /**Verifica que el numerador y denominador no tengan el mismo signo*/
+    if (apRes -> numerador < 0 || apRes -> denominador < 0) {
+        apRes -> numerador = apRes -> numerador * -1;
+        apRes -> denominador = apRes -> denominador * -1;
     }
+}
+
+int MCD(fraccion* ap){
+    int x = ap -> numerador;
+    int y = ap -> denominador;
+    int residuo, mcd;
+    do{
+        residuo = x % y;
+        if(residuo != 0){
+            x = y;
+            y = residuo;
+        }else{
+            mcd = y;
+        }
+    }while (residuo != 0);
+    return mcd;
 }

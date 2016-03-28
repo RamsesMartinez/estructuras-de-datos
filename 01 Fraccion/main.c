@@ -1,7 +1,7 @@
 /*
 * Programa que realiza operaciones con fracciones
 * @author Ramses Martinez Ortiz
-* @version 1.0.0
+* @version 1.0.1
 */
 
 #include "Fraccion.h"
