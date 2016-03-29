@@ -34,6 +34,11 @@ StackEntry pop(ptrNodoPila *ptrCima){
     return valorElim;
 }
 
+/** Devuelve la cima de la pila */
+StackEntry topStack(ptrNodoPila *ptrCima){
+     return (*ptrCima) -> entry;
+}
+
 /**Imprimir la pila */
 void printStack(ptrNodoPila ptrActual){
     if (ptrActual == NULL){

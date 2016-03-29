@@ -7,10 +7,11 @@
 
 int main(){
     /** Apunta al tope de la pila */
+    //createStack(); 
     ptrNodoPila ptrPila = NULL;
     int opc;
     StackEntry se;
-      
+       
     printStack(ptrPila);
 
     while((opc = menu()) != 6) {
@@ -21,13 +22,14 @@ int main(){
                 printf("\nDato:\t");
                 scanf("%d",&se);
                 push(&ptrPila,se);
-                printf("\n<<< Dato insertado >>>\n");
+                system("cls");
+                printf("\n<<< Dato insertado: %d >>>\n",se);
                 break;
 
             /** Remover un elemento */                
             case 2:
                 if(stackEmpty(ptrPila))
-                    printf("\n << La pila esta vacia >>\n");
+                    printf("\n<<< La pila esta vacia >>>\n");
                 else{ 
                     StackEntry aux = pop(&ptrPila);
                     printf("\n<<< Dato retirado: %d >>>\n",aux);
@@ -37,7 +39,7 @@ int main(){
             /** Vacia toda la pila*/
             case 3:
                 if (stackEmpty(ptrPila))
-                    printf("\n <<< Pila vacia >>>\n");
+                    printf("\n<<< La pila esta vacia >>>\n");
                 else{
                     delStack(&ptrPila);
                     printf("\n<<< Pila vaciada >>>\n");
@@ -45,12 +47,12 @@ int main(){
                 break;
             /** Obtiene la cima de la pila */
             case 4:
-                /*if (stackEmpty(ptrPila))
-                    printf("\n << La pila esta vacia >>\n");
-                else         
-                    printf("\n<<< Cima de la pila: %d >>>\n", ptrPila -> entry[pila -> top]);
+                if (stackEmpty(ptrPila))
+                    printf("\n><< La pila esta vacia >>>\n");
+                else   
+                    printf("\n<<< Cima: %d >>>\n",topStack(&ptrPila));
                 break;
-                */
+                
             /** Otiene la cantidad de elementos en la pila */
             case 5:
                 // printf("\n<<< Elementos en la pila: %d >>>\n", ptrPila -> top + 1);
