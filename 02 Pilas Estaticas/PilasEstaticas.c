@@ -31,30 +31,20 @@ bool stackFull(Stack *pila){
 }  
 
 /** Vacia toda la pila */
-bool delStack(Stack *pila){
-    if (!stackEmpty(pila)){
-    	int i;
-        for(i = pila -> top; i >= 0 ; i--){
-            pila -> entry[i] = 0;
-            pila -> top--;
-        }  
-        return true; 
-    }else
-    return;
+void delStack(Stack *pila){
+	int i;
+    for(i = pila -> top; i >= 0 ; i--){
+        pila -> entry[i] = 0;
+        pila -> top--;
+    }  
 }
 
 /** Eliminar dato y retornarlo. Se debe validar en el main aunque ya incluye ya tiene validacion*/
 StackEntry pop(Stack *pila){
     int aux;
-    if (stackEmpty(pila)){
-        printf("<< La Pila esta vacia >>\n");
-        return;
-    }
-    else{
-        aux = pila -> entry[pila -> top];
-        pila -> entry[pila -> top]=0;
-        pila -> top--;
-    }
+    aux = pila -> entry[pila -> top];
+    pila -> entry[pila -> top]=0;
+    pila -> top--;
     return aux;
 }
 

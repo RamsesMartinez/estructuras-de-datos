@@ -2,7 +2,7 @@ Estructuras de Datos
 ====================
 Ejercicios de la materia de Estructuras de Datos
 
-
+ - Compilado con DevC++ 5.9.2. 
 
 Parcial 1
 ---------

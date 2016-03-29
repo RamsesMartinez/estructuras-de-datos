@@ -19,7 +19,7 @@ void createStack(Stack*);
 bool push(StackEntry, Stack*);
 bool stackEmpty(Stack*); 
 bool stackFull(Stack*); 
-bool delStack(Stack*); 
+void delStack(Stack*); 
 StackEntry pop(Stack*);
 int menu();
 void printStack(Stack*);

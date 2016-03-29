@@ -1,7 +1,10 @@
-/** Programa para implementar TDA pila de forma estatica
-    @autor Ramses Martinez Ortiz
-    @version v1.0.1 - 24/02/2016
-        Modificado nombre del metodo imprimir. Comentarios en el main
+/** 
+* Programa para implementar TDA pila de forma estatica
+* @autor Ramses Martinez Ortiz
+* @version v1.0.2 - 29/02/2016
+*    Modificado de la funcion delStack(). 
+*    Las validaciones para la pila vacia se hacen ahora desde el main.
+*	 Reparado error al crear nueva pila
 */
 
 #include "PilasEstaticas.h"
@@ -10,9 +13,10 @@ int main(){
     int opc;
     printf("<<< Pila para %d elementos >>>\n",MAXSTACK);
     StackEntry se;
-    Stack *pila;
+    Stack p, *pila;
+    pila = &p;
     createStack(pila);
-    imprimir(pila);
+    printStack(pila);
     while((opc = menu()) != 6) {
         system("cls");
         switch(opc){  
@@ -36,8 +40,10 @@ int main(){
                 break;
             /** Vaciar toda la pila */
             case 3:
-                if(delStack(pila))
+                if(stackEmpty(pila)){
+                	delStack(pila);
                     printf("\n<<< Pila vaciada >>>\n");
+                }
                 else
                     printf("\n<<< Pila vacia >>>\n");
                 break;
@@ -58,7 +64,7 @@ int main(){
             default:
                 printf("\n<<< Elija una opcion valida >>>\n");
         }
-        imprimir(pila);
+        printStack(pila);
     }
     return 0;
 }
