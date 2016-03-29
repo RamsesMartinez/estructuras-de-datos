@@ -22,4 +22,4 @@ bool stackFull(Stack*);
 bool delStack(Stack*); 
 StackEntry pop(Stack*);
 int menu();
-void imprimir(Stack*);
+void printStack(Stack*);

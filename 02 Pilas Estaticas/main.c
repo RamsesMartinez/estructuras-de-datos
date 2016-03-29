@@ -1,11 +1,12 @@
 /** Programa para implementar TDA pila de forma estatica
     @autor Ramses Martinez Ortiz
-    @version v1.0.0 - 24/02/2016
+    @version v1.0.1 - 24/02/2016
+        Modificado nombre del metodo imprimir. Comentarios en el main
 */
 
 #include "PilasEstaticas.h"
 
-int main(){
+int main(){ 
     int opc;
     printf("<<< Pila para %d elementos >>>\n",MAXSTACK);
     StackEntry se;
@@ -14,7 +15,8 @@ int main(){
     imprimir(pila);
     while((opc = menu()) != 6) {
         system("cls");
-        switch(opc){ 
+        switch(opc){  
+            /** Inserta un elemento*/
             case 1:
                 printf("\nDato:\t");
                 scanf("%d",&se);
@@ -23,6 +25,7 @@ int main(){
                 else
                     printf("\n<<< Pila llena >>>\n");
                 break;
+            /** Remover un elemento */
             case 2:
                 if(stackEmpty(pila))
                     printf("\n << La pila esta vacia >>\n");
@@ -31,18 +34,21 @@ int main(){
                     printf("\n<<< Dato retirado: %d >>>\n",aux);
                 }
                 break;
+            /** Vaciar toda la pila */
             case 3:
                 if(delStack(pila))
                     printf("\n<<< Pila vaciada >>>\n");
                 else
                     printf("\n<<< Pila vacia >>>\n");
                 break;
+            /** Obtener cima de la pila */
             case 4:
                 if (stackEmpty(pila))
                     printf("\n << La pila esta vacia >>\n");
                 else         
                     printf("\n<<< Cima de la pila: %d >>>\n", pila -> entry[pila -> top]);
                 break;
+            /** Obtiene el total de elementos en la pila */
             case 5:
                 printf("\n<<< Elementos en la pila: %d >>>\n", pila -> top + 1);
                 break;

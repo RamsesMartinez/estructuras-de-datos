@@ -74,7 +74,7 @@ int menu(){
     return opc;
 }
 
-void imprimir(Stack *pila){
+void printStack(Stack *pila){
     if(stackEmpty(pila)){
         printf("\n\t--------");
         printf("\n\t| NULL |");
