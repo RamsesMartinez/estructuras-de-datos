@@ -1,10 +1,8 @@
 /** 
 * Programa para implementar TDA pila de forma estatica
 * @autor Ramses Martinez Ortiz
-* @version v1.0.2 - 29/02/2016
-*    Modificado de la funcion delStack(). 
-*    Las validaciones para la pila vacia se hacen ahora desde el main.
-*	 Reparado error al crear nueva pila
+* @version v1.0.3 - 29/02/2016
+* 	Corregido error para borrar elementos
 */
 
 #include "PilasEstaticas.h"
@@ -33,19 +31,21 @@ int main(){
             case 2:
                 if(stackEmpty(pila))
                     printf("\n << La pila esta vacia >>\n");
-                else{ 
+                else {
                     StackEntry aux = pop(pila);
                     printf("\n<<< Dato retirado: %d >>>\n",aux);
                 }
+                
                 break;
             /** Vaciar toda la pila */
             case 3:
-                if(stackEmpty(pila)){
+                if(stackEmpty(pila))
+                	printf("\n<<< Pila vacia >>>\n");
+                else{
                 	delStack(pila);
                     printf("\n<<< Pila vaciada >>>\n");
-                }
-                else
-                    printf("\n<<< Pila vacia >>>\n");
+				}
+                    
                 break;
             /** Obtener cima de la pila */
             case 4:

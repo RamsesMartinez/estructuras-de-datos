@@ -20,7 +20,7 @@ bool push(StackEntry item, Stack *pila){
     return true;
 }
 
- /** Pregunta si la pila vacia */
+ /** Pregunta si la pila vacia. Retorna true si esta vacia */
 bool stackEmpty(Stack *pila){
     return pila -> top < 0;
 }
