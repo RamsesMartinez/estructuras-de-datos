@@ -20,9 +20,10 @@ typedef NodoPila *ptrNodoPila;
 void push(ptrNodoPila*, int);
 StackEntry pop(ptrNodoPila*);
 StackEntry topStack(ptrNodoPila*);
-bool stackEmpty(ptrNodoPila);
 void printStack(ptrNodoPila);
 void delStack(ptrNodoPila*); 
+bool stackEmpty(ptrNodoPila);
+int totalNodes(ptrNodoPila);
 int menu();
 
 

@@ -73,6 +73,15 @@ void delStack(ptrNodoPila *ptrActual){
 bool  stackEmpty(ptrNodoPila ptrCima){
     return ptrCima == NULL;
 }
+
+int totalNodes(ptrNodoPila ptrActual){
+    int nodes = 0; /** Conteo de los nodos */
+    while(ptrActual != NULL){
+        ptrActual = ptrActual -> ptrSiguiente;
+        nodes++;
+    }
+    return nodes;
+}
  
 int menu(){
     int opc;
@@ -83,9 +92,7 @@ int menu(){
     printf("\n4. Cima");
     printf("\n5. Tamanio actual");
     printf("\n6. Salir");  
-
     printf("\n\nOpcion:\t");    
     scanf("%d",&opc);
-
     return opc;
 }

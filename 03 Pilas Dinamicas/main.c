@@ -19,7 +19,7 @@ int main(){
         switch(opc){ 
             /** Inserta un elemento */
             case 1:
-                printf("\nDato:\t");
+                printf("\n>>> Ingrese dato:\t");
                 scanf("%d",&se);
                 push(&ptrPila,se);
                 system("cls");
@@ -55,7 +55,7 @@ int main(){
                 
             /** Otiene la cantidad de elementos en la pila */
             case 5:
-                // printf("\n<<< Elementos en la pila: %d >>>\n", ptrPila -> top + 1);
+                printf("\n<<< Elementos en la pila: %d >>>\n", totalNodes(ptrPila)); 
                 break;
             case 6:
                 printf("BYE BYE");
