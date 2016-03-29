@@ -11,7 +11,7 @@ int main(){
     int opc;
     StackEntry se;
       
-    //printStack(pila);
+    printStack(ptrPila);
 
     while((opc = menu()) != 6) {
         system("cls");

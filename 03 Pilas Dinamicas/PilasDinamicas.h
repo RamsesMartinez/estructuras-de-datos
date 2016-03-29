@@ -22,7 +22,6 @@ StackEntry pop(ptrNodoPila*);
 bool stackEmpty(ptrNodoPila);
 void printStack(ptrNodoPila);
 void delStack(ptrNodoPila*); 
-void printStack(ptrNodoPila);
 int menu();
 
 

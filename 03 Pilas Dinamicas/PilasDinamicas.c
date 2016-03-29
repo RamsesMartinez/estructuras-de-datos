@@ -20,7 +20,7 @@ void push(ptrNodoPila *ptrCima, int entry){
     }else{
         printf("%d No se inserto. Memoria insuficiente. \n",entry);
     }
-}
+} 
 
 /** Eliminar un nodo de la cima de la pila */
 StackEntry pop(ptrNodoPila *ptrCima){
@@ -36,18 +36,24 @@ StackEntry pop(ptrNodoPila *ptrCima){
 
 /**Imprimir la pila */
 void printStack(ptrNodoPila ptrActual){
-    /** Si la pila esta vacia. */
-    if(ptrActual == NULL)
-        printf("La pila esta vacia.\n\n");
-    else{
-        printf("La pila es: \n");
-
-        /** Mientras no sea el final de la pila */
+    if (ptrActual == NULL){
+        printf("\n\t--------");
+        printf("\n\t| NULL |");
+        printf("\n\t--------");
+        printf("\n\t| PILA |");
+        printf("\n\t--------\n");
+    }else{
+        printf("\n\t--------");
+        printf("\n\t| NULL |");
+        /**Mientras no sea el final de la pila*/
         while(ptrActual != NULL){
-            printf("%d -> ",ptrActual -> entry);
+            printf("\n\t--------");
+            printf("\n\t|  %d   |", ptrActual -> entry);
             ptrActual = ptrActual -> ptrSiguiente;
         }
-        printf("NULL\n\n"); 
+        printf("\n\t--------");
+        printf("\n\t| PILA |");
+        printf("\n\t--------\n");
     }
 }
 
@@ -55,7 +61,6 @@ void printStack(ptrNodoPila ptrActual){
 void delStack(ptrNodoPila *ptrActual){
     while(!stackEmpty(*ptrActual)){
         StackEntry aux = pop(ptrActual);
-        printf("\npaso \n");
     }
 }
 
