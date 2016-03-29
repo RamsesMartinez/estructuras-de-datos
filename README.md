@@ -15,3 +15,6 @@ Parcial 1
 ####TAD PILA
 #####Ejercicio 02
  - Escribir un programa para hacer la implementación estática del TAD pila.
+
+#####Ejercicio 03
+ - Escribir un programa para hacer la implementación dinámica del TAD pila.

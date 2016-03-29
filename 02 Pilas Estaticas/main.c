@@ -9,8 +9,7 @@ int main(){
     int opc;
     printf("<<< Pila para %d elementos >>>\n",MAXSTACK);
     StackEntry se;
-    Stack p, *pila;
-    pila = &p;
+    Stack *pila;
     createStack(pila);
     imprimir(pila);
     while((opc = menu()) != 6) {
