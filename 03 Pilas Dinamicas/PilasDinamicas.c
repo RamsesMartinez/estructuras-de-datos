@@ -8,17 +8,18 @@
 #include "PilasDinamicas.h"
 
 /** Insertar un nuevo nodo */
-void push(ptrNodoPila *ptrCima, int info){
+void push(ptrNodoPila *ptrCima, int entry){
     ptrNodoPila ptrNuevo; /** Apuntador al nuevo nodo */
     ptrNuevo = malloc(sizeof(NodoPila));
 
     /** Inserta el nuevo nodo encima de la pila */
     if(ptrNuevo != NULL){
-        ptrNuevo -> dato = info;
+        ptrNuevo -> entry = entry;
         ptrNuevo -> ptrSiguiente = *ptrCima;
         *ptrCima = ptrNuevo;
-    }else
-        printf("%d No se inserto. Memoria insuficiente. \n",info);
+    }else{
+        printf("%d No se inserto. Memoria insuficiente. \n",entry);
+    }
 }
 
 /** Eliminar un nodo de la cima de la pila */
@@ -27,7 +28,7 @@ StackEntry pop(ptrNodoPila *ptrCima){
     StackEntry valorElim; /* Valor del nodo */
     
     ptrTemp = *ptrCima;
-    valorElim = ( *ptrCima )->dato;
+    valorElim = ( *ptrCima )-> entry;
     *ptrCima = ( *ptrCima ) -> ptrSiguiente;
     free(ptrTemp);
     return valorElim;
@@ -43,19 +44,22 @@ void printStack(ptrNodoPila ptrActual){
 
         /** Mientras no sea el final de la pila */
         while(ptrActual != NULL){
-            printf("%d -> ",ptrActual -> dato);
+            printf("%d -> ",ptrActual -> entry);
             ptrActual = ptrActual -> ptrSiguiente;
         }
-        printf("NULL\n\n");
+        printf("NULL\n\n"); 
     }
 }
 
-/**Devuelve true si la pila no esta vacia, de lo contrario retorna false */
-bool delStack(ptrNodoPila ptrActual){
-	return;
+/** Elimina toda la pila */
+void delStack(ptrNodoPila *ptrActual){
+    while(!stackEmpty(*ptrActual)){
+        StackEntry aux = pop(ptrActual);
+        printf("\npaso \n");
+    }
 }
 
-/** Devuelve true si la pila esta vacia, delo contrario false */
+/** Devuelve true si la pila esta vacia, de lo contrario false */
 bool  stackEmpty(ptrNodoPila ptrCima){
     return ptrCima == NULL;
 }

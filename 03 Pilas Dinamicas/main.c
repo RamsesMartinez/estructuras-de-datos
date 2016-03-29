@@ -1,7 +1,7 @@
 /** 
 * Programa que maneja las pilas utilizando memoria dinamica
 * @author Ramses Martinez Ortiz
-* @version 1.0.0	28/03/2016
+* @version 1.0.0    28/03/2016
 */ 
 #include "PilasDinamicas.h"
 
@@ -36,10 +36,12 @@ int main(){
 
             /** Vacia toda la pila*/
             case 3:
-                if(delStack(ptrPila))
+                if (stackEmpty(ptrPila))
+                    printf("\n <<< Pila vacia >>>\n");
+                else{
+                    delStack(&ptrPila);
                     printf("\n<<< Pila vaciada >>>\n");
-                else
-                    printf("\n<<< Pila vacia >>>\n");
+                }
                 break;
             /** Obtiene la cima de la pila */
             case 4:

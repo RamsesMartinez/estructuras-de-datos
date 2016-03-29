@@ -8,8 +8,8 @@
 typedef int StackEntry;
 
 typedef struct nodoPila{
-	StackEntry dato; 
-	struct nodoPila *ptrSiguiente; /** Apuntador al siguiente nodo*/
+    StackEntry entry; 
+    struct nodoPila *ptrSiguiente; /** Apuntador al siguiente nodo*/
 }NodoPila;
 
 typedef NodoPila *ptrNodoPila;
@@ -17,11 +17,11 @@ typedef NodoPila *ptrNodoPila;
 /** Prototipos */
 
 //void createStack(ptrNodoPila);
-void push(ptrNodoPila *ptrCima, int info);
-StackEntry pop(ptrNodoPila *ptrCima);
-bool stackEmpty(ptrNodoPila ptrCima);
-void printStack(ptrNodoPila ptrActual);
-bool delStack(ptrNodoPila); 
+void push(ptrNodoPila*, int);
+StackEntry pop(ptrNodoPila*);
+bool stackEmpty(ptrNodoPila);
+void printStack(ptrNodoPila);
+void delStack(ptrNodoPila*); 
 void printStack(ptrNodoPila);
 int menu();
 

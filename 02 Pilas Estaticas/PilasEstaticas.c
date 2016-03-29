@@ -32,7 +32,7 @@ bool stackFull(Stack *pila){
 
 /** Vacia toda la pila */
 void delStack(Stack *pila){
-	int i;
+    int i;
     for(i = pila -> top; i >= 0 ; i--){
         pila -> entry[i] = 0;
         pila -> top--;
