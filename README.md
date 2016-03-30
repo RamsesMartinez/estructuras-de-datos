@@ -2,19 +2,23 @@ Estructuras de Datos
 ====================
 Ejercicios de la materia de Estructuras de Datos
 
- - Compilado con DevC++ 5.9.2. 
+ - Desarrollado en DevC++ 5.9.2
+ - Compilador: GCC 64 bits
 
 Parcial 1
 ---------
 
 ####TAD FRACCION
-#####Ejercicio 01:
+#####Ejercicio 01: Calculadora de Fracciones
  - Hacer un programa para implementar el TAD fracción de forma dinámica.
 
 
 ####TAD PILA
-#####Ejercicio 02
+#####Ejercicio 02 : Pilas Éstáticas
  - Escribir un programa para hacer la implementación estática del TAD pila.
 
-#####Ejercicio 03
+#####Ejercicio 03: Pilas Dinámicas
  - Escribir un programa para hacer la implementación dinámica del TAD pila.
+
+#####Ejercicio 04: Examinador de Delimitadores
+ - Hacer un programa para examinar los delimitadores (paréntesis, corchetes y llaves) en una expresión y determinar si es válida o no. En caso de no serla mostrar dónde se localizó el error y en qué consiste.

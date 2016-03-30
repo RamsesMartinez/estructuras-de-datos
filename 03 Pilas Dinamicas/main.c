@@ -7,7 +7,6 @@
 
 int main(){
     /** Apunta al tope de la pila */
-    //createStack(); 
     ptrNodoPila ptrPila = NULL;
     int opc;
     StackEntry se;

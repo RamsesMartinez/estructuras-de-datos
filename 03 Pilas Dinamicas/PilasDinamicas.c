@@ -1,10 +1,7 @@
- /**
+/**
 * Archivo que contiene las funciones 
 */
-/*void createStack(ptrNodoPila ptrPila){
-    ptrPila = NULL;
-}
-*/
+
 #include "PilasDinamicas.h"
 
 /** Insertar un nuevo nodo */
@@ -24,6 +21,7 @@ void push(ptrNodoPila *ptrCima, int entry){
 
 /** Eliminar un nodo de la cima de la pila */
 StackEntry pop(ptrNodoPila *ptrCima){
+    printf("AY");
     ptrNodoPila ptrTemp; /** Apuntador a un nodo temporal */
     StackEntry valorElim; /* Valor del nodo */
     
