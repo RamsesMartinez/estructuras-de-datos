@@ -26,7 +26,7 @@ Parcial 1
 #####Ejercicio 07: Colas Estáticas
  - Escribir un programa para hacer la implementación estática del TAD cola.
 
-#####Ejercicio 04: Examinador de Delimitadores
+#####Ejercicio 08: Colas Dinámicas
   - Escribir un programa para hacer la implementación dinámica del TAD cola
       + Agrear a esta implementación lo siguiente:
           * Una operación que produzca la inversa de la cola.
