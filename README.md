@@ -22,3 +22,12 @@ Parcial 1
 
 #####Ejercicio 04: Examinador de Delimitadores
  - Hacer un programa para examinar los delimitadores (paréntesis, corchetes y llaves) en una expresión y determinar si es válida o no. En caso de no serla mostrar dónde se localizó el error y en qué consiste.
+ 
+#####Ejercicio 07: Colas Estáticas
+ - Escribir un programa para hacer la implementación estática del TAD cola.
+
+#####Ejercicio 04: Examinador de Delimitadores
+  - Escribir un programa para hacer la implementación dinámica del TAD cola
+      + Agrear a esta implementación lo siguiente:
+          * Una operación que produzca la inversa de la cola.
+          * Una operación que concatene dos colas.
