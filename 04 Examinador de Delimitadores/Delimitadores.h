@@ -5,8 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-typedef char* String; /** Define el tipo de dato String como un puntero a variable char*/
 typedef char StackEntry;
 typedef struct nodoPila{
     StackEntry entry; 
@@ -16,7 +14,6 @@ typedef struct nodoPila{
 typedef NodoPila *ptrNodoPila;
 
 /** Prototipos */
-
 void push(ptrNodoPila*, StackEntry);
 StackEntry pop(ptrNodoPila*);
 StackEntry topStack(ptrNodoPila*);
@@ -24,7 +21,7 @@ void printStack(ptrNodoPila);
 void delStack(ptrNodoPila*); 
 bool stackEmpty(ptrNodoPila*);
 int totalNodes(ptrNodoPila);
-void verificarExpresion(String*);
-bool verificarDelimitador(char[], char, char);
-void leerCadena(String*);
+void verificarExpresion(char**);
+void verificarDelimitador(char**,char,char);
+
 
