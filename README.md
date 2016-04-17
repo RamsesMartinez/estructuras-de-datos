@@ -23,10 +23,10 @@ Parcial 1
 #####Ejercicio 04: Examinador de Delimitadores
  - Hacer un programa para examinar los delimitadores (paréntesis, corchetes y llaves) en una expresión y determinar si es válida o no. En caso de no serla mostrar dónde se localizó el error y en qué consiste.
 
-####Ejercicio 05: Evaluador de expresiones
+#####Ejercicio 05: Evaluador de expresiones
  - Hacer un evaluador de expresiones en notación posfija que indique si la expresión es errónea, de serlo, deberá indicar mensajes de error, los cuales deberán decir la posición en que se encontró el error y en qué consiste el mismo.
 
-####Ejercicio 06: Examinador de Delimitadores
+#####Ejercicio 06: Examinador de Delimitadores
  - Escribir un programa para convertir una cadena **interfija** a **posfija**.
 
 #####Ejercicio 07: Colas Estáticas
