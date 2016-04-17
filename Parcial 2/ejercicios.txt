@@ -1,0 +1,17 @@
+a) hacer un programa que ordene un conjunto de numeros utilizando el metodo de quicksort (Arreglo)
+
+b) Escribir un programa que realice una busqueda secuencial en una lista lineal vinculada en la que se puedan ingresar y eliminar datos. Debe incluir las mejoras de mover al frente y tranposicion; si un elemento se ha buscado mas de tres veces, se aplica mover al frente, de lo contrario se aplica transposicion
+
+c) Hacer un programa para encontrar  un elemento dentro de un arreglo usando busqueda binaria, cada elemento del arreglo contiene la siguiente informacion: nombre, apellido paterno, apellido materno, boleta y promedio; la busqueda x se puede hacer tomando como llave la boleta o el apellido paterno.
+
+{"cmd": ["g++ -Wall ${file_name} -o ${file_base_name} && ${file_base_name}.exe"],"working_dir": "${file_path}","shell": true}
+
+d) Hacer un programa de tablas Hash cerradas. Las llaves en este caso son numeros enteros. El programa debe mostrar la manera en que queda la tabla despues de insertar o eliminar los elementos. Proponer la funcion hash a utilizar y justificarla como comentario en el programa.
+
+e) Igual que el d) para tablas hash abiertas
+
+f) Se dispone de una aplicación de radáres de tráfico que permite llevar la contabilidad del número de veces que ha pasado un determinado coche por dicho radar superando el límite de velocidad. Para ello se consulta una lista implementada mediante una tabla hash abierta. Sabiendo que el formato de una matricula consta de 3 número seguidos de 3 letras, hacer un programa que genere dicha lista con el fin de contabilizar el número de veces que ha pasado un coche; si es necesario, se debe actualizar la lista de lapalicación. Si la matrícula no está en la lista entonces el coche ha sido vist por primera vez. Si la matricula ya estaba en lña lista entonces hay que guardar en la lista que se ha visto el coche una vez más.
+
+g) Resolver el problema de las torres de hanoi para n discos. ¿Cuál es el número máximo de discos soportado por su equipo?
+
+h) HAcer un programa que dados dos números, a(número entero) y b (numero natural mayor o igual a cero), determine recursivamente a^b (a elevado a la b).

@@ -3,7 +3,6 @@
 * Programa que examina los delimitadores en una expresion y determina si es valido o no.
 * Author Ramses Martinez Ortiz
 * Version 1.0.0    30/03/2016
-* Archivo que contiene las funciones
 */ 
 #include "Delimitadores.h"
 
@@ -124,7 +123,8 @@ void verificarDelimitador(char **cadena, char cAbre, char cCierra){
 	bool evaluacion1 = true; /** Auxilia a saber si se debe continuar evaluando la expresion */
     bool evaluacion2 = true; /** Auxilia a saber si se debe continuar evaluando la expresion */
     
-    while( (*cadena)[i] != '\0' && evaluacion1 == true){
+    /**Ciclo que permite validar la expresion caracter por caracter de izquierda a derecha*/
+    while( (*cadena)[i] != '\0' && evaluacion1 == true){ 
         if ( (*cadena)[i] == cAbre ){ /** Si hay delimitador que abre */
         	existe = true;
             push(&pila1P,cAbre );
@@ -145,6 +145,7 @@ void verificarDelimitador(char **cadena, char cAbre, char cCierra){
     }
     
     i = length;
+    /**Ciclo que permite validar la expresion caracter por caracter de derecha a izquierda*/
     while( i > 0 && evaluacion2 == true){
         if ( (*cadena)[i] == cCierra ){ /** Si hay delimitador que cierra */
             push(&pila2P,cCierra );
