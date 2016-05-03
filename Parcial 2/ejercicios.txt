@@ -1,4 +1,5 @@
 a) hacer un programa que ordene un conjunto de numeros utilizando el metodo de quicksort (Arreglo)
+http://blog.e-urrea.com/source/programa1.c
 
 b) Escribir un programa que realice una busqueda secuencial en una lista lineal vinculada en la que se puedan ingresar y eliminar datos. Debe incluir las mejoras de mover al frente y tranposicion; si un elemento se ha buscado mas de tres veces, se aplica mover al frente, de lo contrario se aplica transposicion
 
@@ -10,8 +11,8 @@ d) Hacer un programa de tablas Hash cerradas. Las llaves en este caso son numero
 
 e) Igual que el d) para tablas hash abiertas
 
-f) Se dispone de una aplicación de radáres de tráfico que permite llevar la contabilidad del número de veces que ha pasado un determinado coche por dicho radar superando el límite de velocidad. Para ello se consulta una lista implementada mediante una tabla hash abierta. Sabiendo que el formato de una matricula consta de 3 número seguidos de 3 letras, hacer un programa que genere dicha lista con el fin de contabilizar el número de veces que ha pasado un coche; si es necesario, se debe actualizar la lista de lapalicación. Si la matrícula no está en la lista entonces el coche ha sido vist por primera vez. Si la matricula ya estaba en lña lista entonces hay que guardar en la lista que se ha visto el coche una vez más.
+f) Se dispone de una aplicaciÃ³n de radÃ¡res de trÃ¡fico que permite llevar la contabilidad del nÃºmero de veces que ha pasado un determinado coche por dicho radar superando el lÃ­mite de velocidad. Para ello se consulta una lista implementada mediante una tabla hash abierta. Sabiendo que el formato de una matricula consta de 3 nÃºmero seguidos de 3 letras, hacer un programa que genere dicha lista con el fin de contabilizar el nÃºmero de veces que ha pasado un coche; si es necesario, se debe actualizar la lista de lapalicaciÃ³n. Si la matrÃ­cula no estÃ¡ en la lista entonces el coche ha sido vist por primera vez. Si la matricula ya estaba en lÃ±a lista entonces hay que guardar en la lista que se ha visto el coche una vez mÃ¡s.
 
-g) Resolver el problema de las torres de hanoi para n discos. ¿Cuál es el número máximo de discos soportado por su equipo?
+g) Resolver el problema de las torres de hanoi para n discos. Â¿CuÃ¡l es el nÃºmero mÃ¡ximo de discos soportado por su equipo?
 
-h) HAcer un programa que dados dos números, a(número entero) y b (numero natural mayor o igual a cero), determine recursivamente a^b (a elevado a la b).
+h) HAcer un programa que dados dos nÃºmeros, a(nÃºmero entero) y b (numero natural mayor o igual a cero), determine recursivamente a^b (a elevado a la b).
