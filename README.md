@@ -37,3 +37,11 @@ Parcial 1
       + Agrear a esta implementación lo siguiente:
           * Una operación que produzca la inversa de la cola.
           * Una operación que concatene dos colas.
+
+
+Parcial 2
+---------
+
+####ORDENAMIENTO Y BUSQUEDA
+#####Ejercicio 01: Método Quicksort
+  - Hacer un programa que ordene un conjunto de numeros utilizando el metodo de quicksort (Arreglo)

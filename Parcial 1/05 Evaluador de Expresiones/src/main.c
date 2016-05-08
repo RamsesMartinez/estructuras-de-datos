@@ -11,7 +11,7 @@
 
 int main(int argc, char const *argv[])
 {
-	char opc;
+    char opc;
     String cadena;
 
     do{
@@ -26,5 +26,5 @@ int main(int argc, char const *argv[])
         fflush( stdin );
         system("cls"); 
     }while(opc == 's' || opc == 'S');
-	return 0;
+    return 0;
 }
