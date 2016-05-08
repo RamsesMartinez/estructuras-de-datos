@@ -5,6 +5,7 @@ Ejercicios de la materia de Estructuras de Datos
  - Desarrollado en DevC++ 5.9.2
  - Compilador: GCC 64 bits
 
+
 Parcial 1
 ---------
 
@@ -29,10 +30,20 @@ Parcial 1
 #####Ejercicio 06: Examinador de Delimitadores
  - Escribir un programa para convertir una cadena **interfija** a **posfija**.
 
+
+####TAD COLA
 #####Ejercicio 07: Colas Estáticas
  - Escribir un programa para hacer la implementación estática del TAD cola.
 
 #####Ejercicio 08: Colas Dinámicas
+  - Escribir un programa para hacer la implementación dinámica del TAD cola
+      + Agrear a esta implementación lo siguiente:
+          * Una operación que produzca la inversa de la cola.
+          * Una operación que concatene dos colas.
+
+
+####TAD LISTA
+#####Ejercicio 11: Colas Dinámicas
   - Escribir un programa para hacer la implementación dinámica del TAD cola
       + Agrear a esta implementación lo siguiente:
           * Una operación que produzca la inversa de la cola.

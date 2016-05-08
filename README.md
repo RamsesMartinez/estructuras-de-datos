@@ -5,6 +5,7 @@ Ejercicios de la materia de Estructuras de Datos
  - Desarrollado en DevC++ 5.9.2
  - Compilador: GCC 64 bits
 
+
 Parcial 1
 ---------
 
@@ -29,6 +30,8 @@ Parcial 1
 #####Ejercicio 06: Examinador de Delimitadores
  - Escribir un programa para convertir una cadena **interfija** a **posfija**.
 
+
+####TAD COLA
 #####Ejercicio 07: Colas Estáticas
  - Escribir un programa para hacer la implementación estática del TAD cola.
 
@@ -39,9 +42,21 @@ Parcial 1
           * Una operación que concatene dos colas.
 
 
+####TAD LISTA
+#####Ejercicio 11: Colas Dinámicas
+  - Escribir un programa para hacer la implementación dinámica del TAD cola
+      + Agrear a esta implementación lo siguiente:
+          * Una operación que produzca la inversa de la cola.
+          * Una operación que concatene dos colas.
+
+
+
 Parcial 2
 ---------
 
 ####ORDENAMIENTO Y BUSQUEDA
 #####Ejercicio 01: Método Quicksort
   - Hacer un programa que ordene un conjunto de numeros utilizando el metodo de quicksort (Arreglo)
+
+#####Ejercicio 02: Búsqueda Secuencial
+  - Escribir un programa que realice una busqueda secuencial en una lista lineal vinculada en la que se puedan ingresar y eliminar datos. Debe incluir las mejoras de mover al frente y tranposicion; si un elemento se ha buscado mas de tres veces, se aplica mover al frente, de lo contrario se aplica transposicion

@@ -5,6 +5,7 @@ Ejercicios de la materia de Estructuras de Datos
  - Desarrollado en DevC++ 5.9.2
  - Compilador: GCC 64 bits
 
+
 Parcial 2
 ---------
 
