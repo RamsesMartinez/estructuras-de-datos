@@ -9,8 +9,13 @@
 
 int main(int argc, char const *argv[]){
 int opc;
+int *list;
+int size = 0;
+int top = -1;
+int data, pos;
+
     createList(&list);
-    while((opc = menu()) != 6) {
+    while((opc = menu()) != 8) {
         system("cls");
         switch(opc){ 
             // Sets the size of the list
@@ -20,6 +25,7 @@ int opc;
                 setSize(&list, size);
                 system("cls");
                 printf("\n<<< Tamanio asignado >>>\n");
+                top=-1;
                 break;
             // Inserts an element in any position
             case 2:
@@ -27,26 +33,73 @@ int opc;
                 scanf("%d",&data);
                 printf("\nIngresa la posicion: >>>");
                 scanf("%d",&pos);
-                if(insert(&(*list), data, pos, top, size))
+                if(insert(&list, data, pos, &top, size))
                     printf("\n<<< Dato insertado >>>");
                 else
                     printf("\n<<< Dato no insertado >>>");
-            break;
+                break;
             // Inserts an element at the beginning
             case 3:
-                if(inStart())
+                printf("\nIngresa el dato: >>> ");
+                scanf("%d",&data);
+                if(inStart(&list, data, &top, size))
                     printf("\n<<< Dato agregado >>>");
                 else
                     printf("\n<<< Dato no agregado >>>");
-            break;
-            // Removes an element
-            case 6:
-                printf("BYE BYE");
                 break;
+            // Inserts an element at the end
+            case 4:
+                printf("\nIngresa el dato: >>> ");
+                scanf("%d",&data);
+                if(inEnd(&list, data, &top, size))
+                    printf("\n<<< Dato agregado >>>");
+                else
+                    printf("\n<<< Dato no agregado >>>");
+                break;
+            // Searches a data
+            case 5:
+                printf("\nDato a buscar: >>> ");
+                scanf("%d",&data);
+                if(top < 0)
+                    printf("\nLa lista esta vacia");
+                else{
+                    pos = searchPosition(&list, data, top);
+                    if(pos == 0)
+                        printf("\n<<< El dato no existe en la lista >>>");
+                    else
+                        printf("\n<<< El dato se encuentra en la posicion: %d >>>",pos);
+                }
+                break;
+            //Searches a data given position
+            case 6:
+                printf("\nPosicion: >>> ");
+                scanf("%d",&pos);
+                if(pos-1 > top || pos-1 < 0)
+                    printf("\n<<< Posicion fuera de la lista >>>");
+                else {
+                    data = searchData(&list,pos);
+                    printf("<<< Dato encontrado: %d >>>",data);
+                    }
+                break;
+            // Removes an element
+            case 7:
+            	printf("Posicion a remover: >>>");
+            	scanf("%d",&pos);
+                if(pos -1 > top || pos-1 < 0 )
+                    printf("\n<<< Posicion fuera de la lista >>>");
+                else{
+                    data = removeData(&list, pos, &top);
+                    printf("<<<\nDato eliminado: %d >>>",data);
+
+                }
+                break;
+            case 8:
+                printf("BYE BYE");
+                    break;
             default:
                 printf("\n<<< Elija una opcion valida >>>\n");
         }
-        printList(&list,end);
+        printList(&list,top);
     }
     return 0;
 }

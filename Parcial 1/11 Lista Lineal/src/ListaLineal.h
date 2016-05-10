@@ -11,23 +11,15 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define MAXSTACK 5 
-typedef struct list{
-    int top;
-    int entry[MAXSTACK];
-}List;
-
-
 void createList(int**);
 void setSize(int**, int);
 void printList(int**, int);
-void insert(int**, int, int, int);
-bool inStart();
-bool inEnd();
-bool isEmpty(int**);
-
-
-struct list{
-    int* list;
-};
+bool insert(int**, int, int, int*, int);
+bool inStart(int**, int, int*, int);
+bool inEnd(int**, int, int*, int);
+bool isEmpty(int);
+bool isFull(int, int);
+int searchPosition(int**, int, int);
+int searchData(int**, int);
+int removeData(int**, int, int*);
 #endif
